@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="flex flex-col h-screen justify-between">
       <ul className="flex leading-6 text-gray-500 gap-x-32 content-center justify-center m-12">
-        <li>
+        {/* <li>
           <button className="font-mono hover:underline" onClick={() => setTab("home")}>Home</button>
         </li>
         <li>
@@ -28,7 +28,7 @@ export default function Home() {
         </li>
         <li>
           <button className="font-mono hover:underline" onClick={() => setTab("partner")}>Partner with us!</button>
-        </li>
+        </li> */}
       </ul>
 
 
@@ -39,9 +39,9 @@ export default function Home() {
         <div className="lg:mx-48 md:mx-32 sm:mx-24 mx-16">
           {(tab === "home") ? (
             <div>
-              <h1 className="font-mono text-5xl pb-12">SF Product Gals 👋</h1>
-              <p className="tracking-widest font-light text-2xl md:w-3/4 lg:w-2/3 xl:w-1/2 leading-8">150+ young womxn in product roles at tech companies, from the Bay Area and beyond. We’re here to build community, serendipitous friendships, and space for collaborative idea exploration. </p>
-              <p className="py-10 font-light text-2xl tracking-widest leading-8 md:w-2/3 lg:w-1/2">Join our texting list to get involved, attend our events, and meet fellow womxn!</p>
+              <h1 className="font-mono text-2xl sm:text-5xl pb-12">SF Product Gals 👋</h1>
+              <p className="tracking-widest font-light sm:text-2xl md:w-3/4 lg:w-2/3 xl:w-1/2 leading-8">150+ young womxn in product roles at tech companies, from the Bay Area and beyond. We’re here to build community, serendipitous friendships, and space for collaborative idea exploration. </p>
+              <p className="py-10 font-light sm:text-2xl tracking-widest leading-8 md:w-2/3 lg:w-1/2">Join our texting list to get involved, attend our events, and meet fellow womxn!</p>
 
 
               {/* <div className="font-mono flex mt-10 relative">
@@ -59,17 +59,21 @@ export default function Home() {
                   </button>
                 </span>
               </div> */}
-
-              <button className="bg-[#BFFB50] border border-black px-8 pb-2 h-24 w-full lg:w-2/3 xl:w-2/5">
-                    <p className="font-mono text-3xl font-bold h-4 text-black tracking-wide">JOIN! 💌</p>
+              <a href="https://airtable.com/shrsZSAGSYUv66z9F">
+              <button className="bg-[#BFFB50] hover:bg-[#AEE24D] border border-black px-8 pb-2 h-24 w-full lg:w-2/3 xl:w-2/5">
+              
+                    <p className="font-mono text-3xl font-bold h-4 text-black tracking-wide"> 
+                    JOIN!
+                    💌</p>
               </button>
+              </a> 
             </div>
           ) : (tab === "about") ? (
             <div className="">
               <h1 className="text-4xl pb-12 font-mono">About us</h1>
-              <p className="tracking-widest font-light text-xl w-1/2 leading-8">As young women working in product in SF, we quickly realized that we were in the minority, often feeling the absence of female mentors and leaders, space to discuss challenges and questions, and feeling often overwhelmed or lonely at times. </p>
-              <p className="py-10 tracking-widest font-light text-xl w-1/2 leading-8">Inspired, we brought together small groups of women product leaders and founders, and saw a budding need for not only community, but curated, shared experiences and third spaces for friendships, inspirations, and shared ambitions. That was how Product Gals was born. </p>
-              <p className="tracking-widest font-light text-xl w-1/2 leading-8">Our community and events will provide this bridge between close, fun friendships and inspirational, ambitious career catalysts. From opportunities to get to know one another and bonding, to sharing stories, we’ll reimagine how to empower womxn in our spaces, together. </p>
+              <p className="tracking-widest font-light sm:text-xl md:w-3/4 lg:w-2/3 xl:w-1/2 leading-8">As young women working in product in SF, we quickly realized that we were in the minority, often feeling the absence of female mentors and leaders, space to discuss challenges and questions, and feeling often overwhelmed or lonely at times. </p>
+              <p className="py-10 tracking-widest font-light sm:text-xl md:w-3/4 lg:w-2/3 xl:w-1/2 leading-8">Inspired, we brought together small groups of women product leaders and founders, and saw a budding need for not only community, but curated, shared experiences and third spaces for friendships, inspirations, and shared ambitions. That was how Product Gals was born. </p>
+              <p className="tracking-widest font-light sm:text-xl md:w-3/4 lg:w-2/3 xl:w-1/2 leading-8">Our community and events will provide this bridge between close, fun friendships and inspirational, ambitious career catalysts. From opportunities to get to know one another and bonding, to sharing stories, we’ll reimagine how to empower womxn in our spaces, together. </p>
 
             </div>
           ) : (tab === "events") ? (
@@ -93,18 +97,18 @@ export default function Home() {
           ) : (
             <div className="text-center">
               <h1 className="text-4xl pb-12 font-mono">Our Partners</h1>
-              <p className="tracking-widest font-light text-xl leading-8 xl:px-64 lg:px-48">Our sponsors and partners play a pivotal role in making our tight-knit, community-oriented events and spaces a reality. Support us and our community of young, ambitious product minds, from speaking opportunities, hosting events, and monetary sponsorship. We’d love to have you!</p>
+              <p className="sm:tracking-widest font-light sm:text-xl text-md leading-8 2xl:px-64 xl:px-32">Our sponsors and partners play a pivotal role in making our tight-knit, community-oriented events and spaces a reality. Support us and our community of young, ambitious product minds, from speaking opportunities, hosting events, and monetary sponsorship. We’d love to have you!</p>
 
 
               <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                 <form action="#" className="space-y-8">
                   <div>
-                    <input type="email" id="email" className="shadow-sm border border-black text-gray-100 text-xl focus:ring-primary-500 focus:border-primary-500 block w-full py-2.5 pl-6" placeholder="you@company.com" required></input>
+                    <input type="email" id="email" className="shadow-sm border border-black text-gray-100 sm:text-xl focus:ring-primary-500 focus:border-primary-500 block w-full py-2.5 pl-6" placeholder="you@company.com" required></input>
                   </div>
                   <div className="sm:col-span-2">
-                    <textarea id="message" className="block w-full text-xl text-gray-100 shadow-sm border border-black pt-2.5 pb-10 pl-6 focus:ring-primary-500 focus:border-primary-500" placeholder="Tell us about you :)"></textarea>
+                    <textarea id="message" className="block w-full sm:text-xl text-gray-100 shadow-sm border border-black pt-2.5 pb-10 pl-6 focus:ring-primary-500 focus:border-primary-500" placeholder="Tell us about you :)"></textarea>
                   </div>
-                  <button type="submit" className="w-fit py-5 px-10 text-xl font-medium text-center text-black border border-black bg-[#BFFB50] focus:ring-4 focus:outline-none focus:ring-primary-300">Partner with us! 💌</button>
+                  <button type="submit" className="w-fit sm:py-5 sm:px-10 px-4 py-4 sm:text-xl font-medium text-center text-black border border-black bg-[#BFFB50] hover:bg-[#AEE24D] focus:ring-4 focus:outline-none focus:ring-primary-300">Partner with us! 💌</button>
                 </form>
               </div>
 
